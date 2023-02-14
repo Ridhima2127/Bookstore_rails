@@ -1,0 +1,27 @@
+
+
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @book.book_name %>
+    <br><br>
+    <%= @book.author_name %>
+  </h1>
+  <p class="lead">
+       <%= @book.description %>  |<br>
+        <%= @book.email %>       |<br>
+         <%= @book.twitter %>
+
+  </p>
+  <p>Category: Fiction</p>
+  <hr class="my-4">
+  
+
+   <%= link_to "Edit this book", edit_book_path(@book), class:"btn btn-secondary" %> 
+   <br><br>
+  <%= link_to "Back to books", books_path, class:"btn btn-dark" %> 
+<br><br>
+  <%= button_to "Destroy this book", @book, method: :delete, class: "btn btn-secondary" %>
+  <br><br>
+  <a class="btn btn-primary btn-lg" href="#" role="buttton">Learn more</a>
+</div>
+
